@@ -1,0 +1,244 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: linear-gradient(to right, #e3f2fd, #bbdefb);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #1e88e5; /* Deep blue */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px; /* Space between navbar items */
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navbar li a:hover {
+    background-color: #1565c0; /* Darker blue */
+    transform: translateY(-3px);
+}
+
+.container {
+    max-width: 900px;
+    margin-top: 80px; /* Adjusted for navbar */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+    animation: fadeIn 0.5s;
+    overflow-y: auto;
+    max-height: 80vh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #1e1e1e;
+    margin-bottom: 25px;
+    font-size: 2.8em; /* Larger heading */
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+    margin-bottom: 30px; /* Space between questions */
+    font-size: 1.5em; /* Slightly larger font */
+    color: #333;
+    font-weight: 600;
+    padding: 20px;
+    border-left: 5px solid #1e88e5; /* Blue left border */
+    background-color: #f9f9f9; /* Light background for questions */
+    border-radius: 8px;
+    transition: box-shadow 0.3s; /* Smooth shadow transition */
+}
+
+.question:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.options {
+    list-style-type: none;
+    padding: 0;
+}
+
+.option {
+    background-color: #87ceeb; /* Green */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px 20px;
+    margin: 10px 0; /* Space between options */
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.4s ease; /* Smooth transition */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+/* Custom styles for the radio button */
+.option input[type="radio"] {
+    width: 24px; /* Increase width of radio */
+    height: 24px; /* Increase height of radio */
+    margin-right: 15px; /* Space between radio and label text */
+    cursor: pointer; /* Change cursor for radio */
+}
+
+.option label {
+    display: flex; /* Make label a flex container */
+    align-items: center; /* Center align items */
+}
+
+.option:hover {
+    background-color: #1565c0; /* Darker green on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+}
+
+.option:active {
+    transform: translateY(1px); /* Downward movement on click */
+}
+
+.submit-button {
+    background-color: #add8e6; /* Light blue */
+    color: black; /* Darker text for contrast */
+    border: none;
+    border-radius: 8px;
+    padding: 15px 30px;
+    font-size: 20px; /* Slightly larger button text */
+    cursor: pointer;
+    margin-top: 30px; /* Space above button */
+    transition: all 0.4s ease; /* Smooth transition */
+    display: block;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+}
+
+.submit-button:hover {
+    background-color: #87ceeb; /* Slightly darker light blue on hover */
+    transform: translateY(-3px); /* Slight upward movement */
+}
+
+.submit-button:active {
+    transform: translateY(1px); /* Downward movement on click */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 25px; /* Adjust padding on smaller screens */
+    }
+
+    h1 {
+        font-size: 2.2em; /* Smaller heading on mobile */
+    }
+
+    .option {
+        font-size: 16px; /* Smaller font for options */
+    }
+
+    .submit-button {
+        font-size: 18px; /* Smaller button on mobile */
+    }
+
+    .question {
+        font-size: 1.2em; /* Smaller question text on mobile */
+    }
+
+}
+/* Result Section Styling */
+.results-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.result-item {
+    background-color: #f7f7f7; /* Light background */
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.result-question {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.result-answer, .correct-answer {
+    font-size: 1em;
+    color: #555;
+}
+
+.correct-tag {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.wrong-tag {
+    color: red;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Score Summary Section */
+.score-summary {
+    text-align: center;
+    background-color: #e3f2fd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.score-summary p {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+

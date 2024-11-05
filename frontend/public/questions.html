@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="./css/questions.css"> <!-- Link to the CSS file -->
+    
+</head>
+
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="./welcome.html">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1 id="domain-name">Quiz Domain</h1>
+
+        <!-- Questions will be displayed here -->
+        <div id="questions-container"></div>
+
+        <!-- Navigation buttons -->
+        <div id="navigation-container">
+            <button id="prev-button" class="submit-button">Previous</button>
+            <button id="next-button" class="submit-button">Next</button>
+        </div>
+
+        <!-- Score display section (where Retry and Welcome buttons will be added) -->
+        <div id="score-container"></div>
+        <button id="retry-button" style="display:none;">Retry</button>
+        <button id="back-button" style="display:none;">Back to Welcome Page</button>
+        <button id="submit-button" style="display:none;">Submit</button> <!-- New Submit Button -->
+    </div>
+
+    <script src="./js/questions.js"></script>
+</body>
+</html>

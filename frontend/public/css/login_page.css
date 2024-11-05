@@ -1,0 +1,69 @@
+body{
+    text-align: center;
+    font-style: italic;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-size: 20px;
+}
+.shannu{
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px;
+    padding: 15px;
+    grid-column: 3;
+    grid-row: 1;
+    font-size: 22px;
+    border-radius: 30px;
+}
+.shannu input{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-left: 45px;
+    margin-top: 10px;
+}
+
+.buttonm {
+    color: black;
+    background-color: beige;
+    border-radius: 20px;
+    height: 30px; /* Increased height for a larger button */
+    width: 180px; /* Set a fixed width for the button */
+    font-size: 18px; /* Increase font size for better readability */
+    
+
+}
+
+.button{
+    color:black;
+    background-color:beige;
+    border-radius: 20px;
+    height:30px;
+}
+.button:hover{
+    background-color: skyblue;
+}
+div{
+    margin: 30px;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+}
+.main{
+    display:grid;
+    grid-template-columns: 100fr 100fr 100fr 100fr;
+}
+.sign{
+    color: white;
+    grid-column: 3;
+    grid-row: 2;
+}
+.pandu {
+    height: 5px;
+    padding: 8px; 
+}

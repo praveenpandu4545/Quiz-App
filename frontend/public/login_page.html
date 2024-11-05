@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login_page.css" >
+    <style>
+        body {
+            background: url('./images/loginbg.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .master-login {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #28a745; /* Change color as needed */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .master-login:hover {
+            background-color: #218838; /* Darker shade on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- //<button class="master-login" onclick="location.href='masterlogin.html'">Master Login</button> -->
+    
+    <h1>Hi mate, welcome back to</h1>
+    <h2>Mind Maze: Conquer the Quiz World</h2>
+    <div class="main">
+        <div class="shannu">
+            <form id="loginForm" action="/signinon/login" method="post">
+                <label for="email">E-mail:</label>
+                <input class="pandu" type="email" name="email" id="email" placeholder="xyz@gmail.com" required /><br />
+                
+                <label for="password">Password:</label>
+                <input class="pandu" type="password" name="password" id="password" required /><br />
+
+                <input type="submit" value="Login" class="buttonm" />
+            </form>
+        </div>
+        <div class="sign">
+            <label>NEW USER?? CLICK---</label>
+            <button class="button"><a href="./signup.html">Sign up</a></button>
+        </div>
+    </div>
+    <script src="./js/login_page.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="./css/signup.css" />
+    <style>
+      body {
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+
+  <body background="./images/signupbg-transformed.jpeg">
+    <p style="font-size: 45px">Create an account</p>
+    <div class="container">
+      <!-- <h2>Signup</h2> -->
+      <form id="signupForm" >
+        <input
+          type="text"
+          class="input-style"
+          id="names"
+          name="name"
+          placeholder="Name"
+          required
+        /><br />
+
+        <input
+          type="email"
+          class="input-style"
+          id="email"
+          name="email"
+          placeholder="E-mail"
+          required
+        /><br />
+
+        <input
+          type="tel"
+          class="input-style"
+          id="mobile"
+          name="mobile"
+          pattern="[0-9]{10}"
+          placeholder="Mobile Number"
+          required
+        /><br />
+
+        <input
+          type="password"
+          class="input-style"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+        /><br />
+
+        <input
+          type="password"
+          class="input-style"
+          id="confirmPassword"
+          name="confirmPassword"
+          placeholder="Confirm Password"
+          required
+        /><br />
+
+        <div id="error-message" class="error-message"></div>
+        <div class="buttons">
+          <input type="submit" value="Sign up" class="button" />
+          <input type="reset" value="Reset" class="button" />
+        </div>
+      </form>
+    </div>
+
+    <script src="./js/signupps.js"></script>
+  </body>
+</html>

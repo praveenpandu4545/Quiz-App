@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <title>User Dashboard</title>
+</head>
+<body>
+    
+   
+  
+    <div class="container"> <!-- Change from dashboard-container to container -->
+        <div class="navbar">
+            <ul>
+                <li><a href="./dashboard.html">Dashboard</a></li>
+                <li><a href="welcome.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="login_page.html">Log out</a></li>
+            </ul>
+        </div>
+      
+        <h1>User Dashboard</h1>
+        
+        <div class="details-section">
+            <h2>Your Details</h2>
+            <p><strong>Name:</strong> <span id="user-name">John Doe</span></p>
+            <p><strong>Email:</strong> <span id="user-email">johndoe@example.com</span></p>
+            <p><strong>Mobile Number:</strong> <span id="user-mobile">123-456-7890</span></p>
+        </div>
+        
+        <div class="achievements-section">
+            <h2>Your Achievements</h2>
+            <p><strong>Number of Quizzes Participated:</strong> <span id="quizzes-participated">5</span></p>
+            <p><strong>Average Marks:</strong> <span id="average-marks">85%</span></p>
+        </div>
+        
+        <button id="refresh-dashboard">Refresh Dashboard</button>
+    </div>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

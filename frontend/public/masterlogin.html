@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/login_page.css" >
+  </head>
+  <body
+    background="./images/loginbg.jpeg";
+  >
+    <h1>Hi mate welcome back to</h1>
+    <h2>Mind Maze: Conquer the Quiz World</h2>
+    <div class="main">
+      <div class="shannu">
+        <form id="loginForm" action="/signinon/login" method="post">
+          <label for="email">E-mail:</label>
+          <input class="pandu" type="email" name="email" id="email" placeholder="xyz@gmail.com" required /><br />
+          
+          <label for="password">Password:</label>
+          <input class="pandu" type="password" name="password" id="password" required /><br />
+
+          <label >Master Key:</label>
+          <input class="pandu" type="password" name="Mkey" id="Mkey" required /><br />
+
+
+          <input type="submit" value="Login" class="buttonm" />
+        </form>
+        
+      </div>
+      <div class="sign">
+         <label> NEW USER ?? CLICK--- </label>
+        <button class="button"><a href="./mastersignup.html"> Sign up </a></button>
+      </div>
+    </div>
+    <script src="./js/masterlogin.js"></script>
+  </body>
+</html>

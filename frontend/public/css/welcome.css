@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+    justify-content: center;
+    padding-left: 20px; /* Optional padding for left alignment */
+}
+
+.navbar {
+    background-color: rgba(51, 51, 51, 0.85); /* Semi-transparent background */
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px); /* Add a blur effect */
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Space out menu items */
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.navbar li a:hover {
+    color: #f0f0f0; /* Lighten text color on hover */
+}
+
+.container {
+    text-align: left; /* Align text to the left */
+    margin-top: 80px; /* Adjusted for navbar */
+}
+
+h1 {
+    color: white; /* Set font color to white */
+    margin-bottom: 20px;
+    font-size: 3em; /* Increased size */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+h2 {
+    margin-bottom: 30px;
+    color: white; /* Set font color to white */
+    font-size: 1.8em; /* Increased size */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.button-container {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(3, auto); /* 3 rows */
+    gap: 30px; /* Increase space between buttons */
+    width: 100%; /* Full width for button container */
+}
+
+.quiz-button {
+    background-color: #d1e7dd; /* Light green color */
+    color: #0f5132; /* Darker green text */
+    border: none;
+    border-radius: 12px; /* More rounded corners */
+    padding: 15px 35px;
+    font-size: 20px; /* Increased font size */
+    font-weight: bold; /* Bold text for emphasis */
+    font-family: 'Verdana', sans-serif; /* Change font style */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hide overflow for pseudo-elements */
+    text-transform: uppercase; /* Uppercase text for buttons */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+.quiz-button:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2); /* Lighter overlay */
+    border-radius: 50%;
+    transition: all 0.6s ease;
+    transform: translate(-50%, -50%) scale(0);
+    z-index: 0; /* Behind the button text */
+}
+
+.quiz-button:hover:before {
+    transform: translate(-50%, -50%) scale(1); /* Scale on hover */
+}
+
+.quiz-button:hover {
+    background-color: #c3e6cb; /* Lighter green on hover */
+    color: #0d4121; /* Darker text color on hover */
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+}
+
+.quiz-button:active {
+    transform: translateY(2px); /* Downward movement on click */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Return to original shadow */
+}
+
+/* Add a responsive font size for smaller screens */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em; /* Smaller size */
+    }
+
+    h2 {
+        font-size: 1.4em; /* Smaller size */
+    }
+
+    .quiz-button {
+        padding: 10px 20px; /* Smaller padding */
+        font-size: 16px; /* Smaller font size */
+    }
+}
